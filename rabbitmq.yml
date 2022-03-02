@@ -1,0 +1,15 @@
+  rabbitmq:
+    image: rabbitmq:3-management
+    container_name: rabbitmq_main
+    restart: always
+    hostname: rabbitmq
+    # volumes:
+    #   - ./dados:/var/lib/rabbitmq/
+    ports:
+      - 15672:15672
+      - 5672:5672
+    environment:
+      - RABBITMQ_DEFAULT_USER=admin
+      - RABBITMQ_DEFAULT_PASS=admin
+
+# Login: guest
